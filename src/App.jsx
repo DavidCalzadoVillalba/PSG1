@@ -5,15 +5,12 @@ import Solvencia from './components/Solvencia';
 import Especializacion from './components/Especializacion';
 import Proyectos from './components/Proyectos';
 import EquipoPCAP from './components/EquipoPCAP';
-import CompromisoDEGA from './components/CompromisoDEGA';
 import Footer from './components/Footer';
-import AuditModal from './components/AuditModal';
 import LegalModal from './components/LegalModal';
 import { ArrowUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function App() {
-  const [auditModalOpen, setAuditModalOpen] = useState(false);
   const [legalModalType, setLegalModalType] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -32,45 +29,37 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-[#1A5C38] selection:text-white">
       
-      {/* Fixed Sticky Header Navbar */}
-      <Navbar onOpenAuditModal={() => setAuditModalOpen(true)} />
+      {/* Barra de Navegación Flotante */}
+      <Navbar />
 
-      {/* Main Content Sections */}
+      {/* Secciones Corporativas de FimoSoft */}
       <main>
-        {/* 1. Hero Section (Pantalla Completa & Impacto) */}
-        <Hero onOpenAuditModal={() => setAuditModalOpen(true)} />
+        {/* 1. Hero Section (Presentación de Empresa & Propósito) */}
+        <Hero />
 
-        {/* 2. Quiénes Somos y Rigor Metodológico (2 columnas) */}
+        {/* 2. Quiénes Somos y Rigor Metodológico */}
         <Solvencia />
 
-        {/* 3. Áreas de Especialización Clave (Grid 3 columnas) */}
+        {/* 3. Áreas de Especialización Clave (Esquemas Gráficos) */}
         <Especializacion />
 
-        {/* 4. Proyectos de Referencia (Galería con Presupuestos) */}
+        {/* 4. Proyectos de Referencia en el Sector Público */}
         <Proyectos />
 
-        {/* 5. Equipo Multidisciplinar PCAP (Sin nombres físicos) */}
+        {/* 5. Capacidades Globales de Nuestro Equipo */}
         <EquipoPCAP />
-
-        {/* 6. Compromiso de Valor para el Portal DEGA (IECA) */}
-        <CompromisoDEGA onOpenAuditModal={() => setAuditModalOpen(true)} />
       </main>
 
-      {/* 7. Footer / Contacto Rápido */}
+      {/* 6. Pie de Página y Contacto Rápido */}
       <Footer onOpenLegalModal={(type) => setLegalModalType(type)} />
 
-      {/* Modals */}
-      <AuditModal 
-        isOpen={auditModalOpen} 
-        onClose={() => setAuditModalOpen(false)} 
-      />
-
+      {/* Modal Legal y Transparencia */}
       <LegalModal 
         type={legalModalType} 
         onClose={() => setLegalModalType(null)} 
       />
 
-      {/* Floating Scroll-to-Top Button */}
+      {/* Botón Flotante para Volver Arriba */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button

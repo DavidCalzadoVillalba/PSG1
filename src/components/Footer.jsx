@@ -1,12 +1,12 @@
 import React from 'react';
-import { 
-  Building2, 
-  MapPin, 
-  Mail, 
-  Phone, 
-  ShieldCheck, 
-  FileText, 
-  Lock, 
+import {
+  Building2,
+  MapPin,
+  Mail,
+  Phone,
+  ShieldCheck,
+  FileText,
+  Lock,
   ExternalLink,
   Heart
 } from 'lucide-react';
@@ -15,10 +15,10 @@ export default function Footer({ onOpenLegalModal }) {
   return (
     <footer id="contacto" className="bg-slate-950 text-white pt-20 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-slate-800/80">
-          
+
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
@@ -62,8 +62,8 @@ export default function Footer({ onOpenLegalModal }) {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a 
-                  href="mailto:contactofimo@gmail.com" 
+                <a
+                  href="mailto:contactofimo@gmail.com"
                   className="hover:text-emerald-400 transition-colors font-medium"
                 >
                   contactofimo@gmail.com
@@ -71,11 +71,11 @@ export default function Footer({ onOpenLegalModal }) {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a 
-                  href="tel:676974210" 
+                <a
+                  href="tel:637786575"
                   className="hover:text-emerald-400 transition-colors font-medium font-mono"
                 >
-                  676 974 210
+                  637 78 65 75
                 </a>
               </li>
             </ul>
