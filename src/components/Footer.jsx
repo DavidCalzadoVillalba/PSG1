@@ -42,7 +42,7 @@ export default function Footer({ onOpenLegalModal }) {
                 Sevilla, España
               </span>
               <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300">
-                CIF B-41XXXXXX
+                CIF B-21414233
               </span>
             </div>
           </div>

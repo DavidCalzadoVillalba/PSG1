@@ -56,33 +56,16 @@ export default function Solvencia() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Encabezado Conciso */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[11px] font-bold uppercase tracking-widest text-[#1A5C38] bg-[#EDF7F1] px-3.5 py-1 rounded-full border border-[#1A5C38]/20 inline-block"
-          >
-            Solvencia & Garantía Operativa
-          </motion.span>
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2.5 tracking-tight"
+            className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight"
           >
             Quiénes Somos y Rigor Metodológico
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-slate-500 text-sm mt-2"
-          >
-            Proximidad geográfica inmediata en Sevilla y estándares de calidad para la Administración Pública.
-          </motion.p>
         </div>
 
         {/* Grid de 2 Columnas */}
@@ -106,26 +89,18 @@ export default function Solvencia() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Sede y Raíz Andaluza
               </h3>
 
-              <p className="text-slate-600 text-xs leading-relaxed mb-5">
-                Sede central en <strong className="text-slate-900">Calle Tarfia 7 (Sevilla)</strong>. Especializados en ingeniería de software para el sector público andaluz.
-              </p>
-
               {/* Ubicación Visual */}
               <div className="bg-emerald-950/5 rounded-2xl p-4 border border-emerald-800/10 mb-5 text-xs text-slate-700">
-                <div className="flex items-center justify-between font-semibold mb-1 text-[#1A5C38]">
+                <div className="flex items-center justify-between font-semibold text-[#1A5C38]">
                   <span className="flex items-center gap-1.5">
                     <MapPin className="w-4 h-4" />
                     Calle Tarfia, 7 — Sevilla
                   </span>
-                  <span className="font-mono text-[10px] text-slate-500">37.3629° N, 5.9869° W</span>
                 </div>
-                <p className="text-[11px] text-slate-500">
-                  A 10 minutos de la sede central del IECA (Pabellón de Nueva Zelanda, Isla de la Cartuja).
-                </p>
               </div>
 
               {/* 4 Indicadores Rápidos */}
@@ -172,13 +147,9 @@ export default function Solvencia() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Garantía y Estándares Públicos
               </h3>
-
-              <p className="text-slate-600 text-xs leading-relaxed mb-4">
-                Marcos técnicos oficiales para entrega de software trazable, auditado y sin desviaciones.
-              </p>
 
               {/* Selector Interactivo de Estándares */}
               <div className="flex flex-wrap gap-1.5 mb-4">
@@ -187,8 +158,8 @@ export default function Solvencia() {
                     key={std.id}
                     onClick={() => setActiveStandard(idx)}
                     className={`px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer ${activeStandard === idx
-                        ? 'bg-[#1A5C38] text-white shadow-sm scale-105'
-                        : 'bg-white border border-slate-200 text-slate-700 hover:border-[#1A5C38]/50'
+                      ? 'bg-[#1A5C38] text-white shadow-sm scale-105'
+                      : 'bg-white border border-slate-200 text-slate-700 hover:border-[#1A5C38]/50'
                       }`}
                   >
                     {std.name}
